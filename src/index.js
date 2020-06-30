@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 
-export const Toggle = () => {
+export const Toggle = ({ offText, onText }) => {
   return (
     <Container>
-      <span>OFF</span>
+      {offText && <span>{offText}</span>}
       <Wrapper>
         <Input type="checkbox" />
         <Slider />
       </Wrapper> 
-      <span>ON</span>
+      {onText && <span>{onText}</span>}
     </Container>
   );
 };

@@ -7,7 +7,8 @@ import 'react-custom-toggle/dist/index.css'
 const App = () => {
   return (
     <Container>
-      <Toggle />
+      <Toggle offText="OFF" onText="ON"/>
+      <Toggle offText="No" onText="Yes"/>
       <Toggle />
     </Container>
   );
