@@ -10,6 +10,7 @@ const App = () => {
       <Toggle offText="OFF" onText="ON" large />
       <Toggle />
       <Toggle offText="No" onText="Yes" small />
+      <Toggle offText="No" onText="Yes" extraSmall />
     </Container>
   );
 };

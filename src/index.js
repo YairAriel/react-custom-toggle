@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
 
-export const Toggle = ({ offText, onText, large, small }) => {
-  return (
-    <Container>
-      {offText && <span>{offText}</span>}
-      <Wrapper large={large} small={small}>
-        <Input type="checkbox" large={large} small={small} />
-        <Slider large={large} small={small} />
-      </Wrapper> 
-      {onText && <span>{onText}</span>}
-    </Container>
-  );
-};
+export const Toggle = ({ offText, onText, large, small, extraSmall }) => (
+  <Container>
+    {offText && <span>{offText}</span>}
+    <Wrapper large={large} small={small} extraSmall={extraSmall}>
+      <Input type="checkbox" large={large} small={small} extraSmall={extraSmall} />
+      <Slider large={large} small={small} extraSmall={extraSmall} />
+    </Wrapper> 
+    {onText && <span>{onText}</span>}
+  </Container>
+);
 
 const Container = styled.div`
   display: flex;
@@ -34,6 +32,11 @@ const Wrapper = styled.label`
       return `
         width: 60px;
         height: 30px;
+      `
+    } else if (props.extraSmall) {
+      return `
+        width: 40px;
+        height: 20px;
       `
     } else {
       return `
@@ -57,6 +60,10 @@ const Input = styled.input`
       } else if (props.small) {
         return `
           transform: translateX(28px) rotateZ(360deg);
+        `
+      } else if (props.extraSmall) {
+        return `
+          transform: translateX(18px) rotateZ(360deg);
         `
       } else {
         return `
@@ -89,6 +96,10 @@ const Slider = styled.span`
       return `
         padding-inline-start: 4px;
       `
+    } else if (props.extraSmall) {
+      return `
+        padding-inline-start: 3px;
+      `
     } else {
       return `
         padding-inline-start: 5px;
@@ -113,6 +124,12 @@ const Slider = styled.span`
         width: 24px;
         height: 24px;
         top: 3px;
+      `
+    } else if (props.extraSmall) {
+      return `
+        width: 16px;
+        height: 16px;
+        top: 2px;
       `
     } else {
       return `
