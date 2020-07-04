@@ -11,6 +11,7 @@ const App = () => {
       <Toggle />
       <Toggle offText="No" onText="Yes" small />
       <Toggle offText="No" onText="Yes" extraSmall />
+      <Toggle offText="No" onText="Yes" extraSmalll />
     </Container>
   );
 };

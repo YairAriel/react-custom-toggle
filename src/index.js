@@ -1,28 +1,51 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const Toggle = ({ offText, onText, large, small, extraSmall }) => (
+export const Toggle = ({
+  offText,
+  onText,
+  large,
+  small,
+  extraSmall,
+  extraSmalll
+}) => (
   <Container>
     {offText && <span>{offText}</span>}
-    <Wrapper large={large} small={small} extraSmall={extraSmall}>
-      <Input type="checkbox" large={large} small={small} extraSmall={extraSmall} />
-      <Slider large={large} small={small} extraSmall={extraSmall} />
-    </Wrapper> 
+    <Wrapper
+      large={large}
+      small={small}
+      extraSmall={extraSmall}
+      extraSmalll={extraSmalll}
+    >
+      <Input
+        type='checkbox'
+        large={large}
+        small={small}
+        extraSmall={extraSmall}
+        extraSmalll={extraSmalll}
+      />
+      <Slider
+        large={large}
+        small={small}
+        extraSmall={extraSmall}
+        extraSmalll={extraSmalll}
+      />
+    </Wrapper>
     {onText && <span>{onText}</span>}
   </Container>
-);
+)
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Wrapper = styled.label`
   position: relative;
   display: block;
   margin: 0 0.5rem;
-  ${props => {
+  ${(props) => {
     if (props.large) {
       return `
         width: 100px;
@@ -38,6 +61,11 @@ const Wrapper = styled.label`
         width: 40px;
         height: 20px;
       `
+    } else if (props.extraSmalll) {
+      return `
+        width: 20px;
+        height: 10px;
+      `
     } else {
       return `
         width: 80px;
@@ -45,35 +73,39 @@ const Wrapper = styled.label`
       `
     }
   }}
-`;
+`
 
 const Input = styled.input`
   display: none;
   &:checked + span {
-  background: #68D391;
-  &::before {
-    ${props => {
-      if (props.large) {
-        return `
+    background: #68d391;
+    &::before {
+      ${(props) => {
+        if (props.large) {
+          return `
           transform: translateX(48px) rotateZ(360deg);
         `
-      } else if (props.small) {
-        return `
+        } else if (props.small) {
+          return `
           transform: translateX(28px) rotateZ(360deg);
         `
-      } else if (props.extraSmall) {
-        return `
+        } else if (props.extraSmall) {
+          return `
           transform: translateX(18px) rotateZ(360deg);
         `
-      } else {
-        return `
+        } else if (props.extraSmalll) {
+          return `
+          transform: translateX(8px) rotateZ(360deg);
+        `
+        } else {
+          return `
           transform: translateX(38px) rotateZ(360deg);
         `
-      }
-    }}
+        }
+      }}
+    }
   }
-}
-`;
+`
 
 const Slider = styled.span`
   position: absolute;
@@ -82,12 +114,13 @@ const Slider = styled.span`
   left: 0;
   right: 0;
   cursor: pointer;
-  background: #FC8181;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), inset 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+  background: #fc8181;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 3px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 36px;
   transition: 300ms;
   transition-delay: 200ms;
-  ${props => {
+  ${(props) => {
     if (props.large) {
       return `
         padding-inline-start: 6px;
@@ -100,6 +133,10 @@ const Slider = styled.span`
       return `
         padding-inline-start: 3px;
       `
+    } else if (props.extraSmalll) {
+      return `
+        padding-inline-start: 2px;
+      `
     } else {
       return `
         padding-inline-start: 5px;
@@ -109,35 +146,41 @@ const Slider = styled.span`
   &::before {
     content: '';
     position: absolute;
-    background: conic-gradient(#F7FAFC, #EDF2F7, #E2E8F0, #CBD5E0, #A0AEC0);
+    background: conic-gradient(#f7fafc, #edf2f7, #e2e8f0, #cbd5e0, #a0aec0);
     transition: 300ms;
     border-radius: 50%;
-    ${props => {
-    if (props.large) {
-      return `
+    ${(props) => {
+      if (props.large) {
+        return `
         width: 40px;
         height: 40px;
         top: 5px;
       `
-    } else if (props.small) {
-      return `
+      } else if (props.small) {
+        return `
         width: 24px;
         height: 24px;
         top: 3px;
       `
-    } else if (props.extraSmall) {
-      return `
+      } else if (props.extraSmall) {
+        return `
         width: 16px;
         height: 16px;
         top: 2px;
       `
-    } else {
-      return `
+      } else if (props.extraSmalll) {
+        return `
+        width: 8px;
+        height: 8px;
+        top: 1px;
+      `
+      } else {
+        return `
         width: 32px;
         height: 32px;
         top: 4px;
       `
-    }
-  }}
+      }
+    }}
   }
-`;
+`
