@@ -7,10 +7,19 @@ export const Toggle = ({
   extraLarge,
   large,
   small,
-  extraSmall,
+  extraSmall
 }) => (
   <Container>
-    {offText && <span>{offText}</span>}
+    {offText && (
+      <Text
+        extraLarge={extraLarge}
+        large={large}
+        small={small}
+        extraSmall={extraSmall}
+      >
+        {offText}
+      </Text>
+    )}
     <Wrapper
       extraLarge={extraLarge}
       large={large}
@@ -31,7 +40,16 @@ export const Toggle = ({
         extraSmall={extraSmall}
       />
     </Wrapper>
-    {onText && <span>{onText}</span>}
+    {onText && (
+      <Text
+        extraLarge={extraLarge}
+        large={large}
+        small={small}
+        extraSmall={extraSmall}
+      >
+        {onText}
+      </Text>
+    )}
   </Container>
 )
 
@@ -39,6 +57,32 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const Text = styled.span`
+  ${(props) => {
+    if (props.extraLarge) {
+      return `
+        font-size: 1.4em;
+      `
+    } else if (props.large) {
+      return `
+        font-size: 1.2em;
+      `
+    } else if (props.small) {
+      return `
+        font-size: 0.8em;
+      `
+    } else if (props.extraSmall) {
+      return `
+        font-size: 0.6em;
+      `
+    } else {
+      return `
+        font-size: 1em;
+      `
+    }
+  }}
 `
 
 const Wrapper = styled.label`
