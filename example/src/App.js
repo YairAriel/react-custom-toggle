@@ -7,11 +7,11 @@ import 'react-custom-toggle/dist/index.css'
 const App = () => {
   return (
     <Container>
+      <Toggle offText="OFF" onText="ON" extraLarge />
       <Toggle offText="OFF" onText="ON" large />
-      <Toggle />
-      <Toggle offText="No" onText="Yes" small />
-      <Toggle offText="No" onText="Yes" extraSmall />
-      <Toggle offText="No" onText="Yes" extraSmalll />
+      <Toggle offText="OFF" onText="ON" />
+      <Toggle offText="OFF" onText="ON" small />
+      <Toggle offText="OFF" onText="ON" extraSmall />
     </Container>
   );
 };

@@ -4,31 +4,31 @@ import styled from 'styled-components'
 export const Toggle = ({
   offText,
   onText,
+  extraLarge,
   large,
   small,
   extraSmall,
-  extraSmalll
 }) => (
   <Container>
     {offText && <span>{offText}</span>}
     <Wrapper
+      extraLarge={extraLarge}
       large={large}
       small={small}
       extraSmall={extraSmall}
-      extraSmalll={extraSmalll}
     >
       <Input
         type='checkbox'
+        extraLarge={extraLarge}
         large={large}
         small={small}
         extraSmall={extraSmall}
-        extraSmalll={extraSmalll}
       />
       <Slider
+        extraLarge={extraLarge}
         large={large}
         small={small}
         extraSmall={extraSmall}
-        extraSmalll={extraSmalll}
       />
     </Wrapper>
     {onText && <span>{onText}</span>}
@@ -46,30 +46,30 @@ const Wrapper = styled.label`
   display: block;
   margin: 0 0.5rem;
   ${(props) => {
-    if (props.large) {
+    if (props.extraLarge) {
       return `
         width: 100px;
         height: 50px;
       `
-    } else if (props.small) {
+    } else if (props.large) {
       return `
-        width: 60px;
-        height: 30px;
+        width: 80px;
+        height: 40px;
       `
-    } else if (props.extraSmall) {
+    } else if (props.small) {
       return `
         width: 40px;
         height: 20px;
       `
-    } else if (props.extraSmalll) {
+    } else if (props.extraSmall) {
       return `
         width: 20px;
         height: 10px;
       `
     } else {
       return `
-        width: 80px;
-        height: 40px;
+        width: 60px;
+        height: 30px;
       `
     }
   }}
@@ -81,25 +81,25 @@ const Input = styled.input`
     background: #68d391;
     &::before {
       ${(props) => {
-        if (props.large) {
+        if (props.extraLarge) {
           return `
-          transform: translateX(48px) rotateZ(360deg);
+            transform: translateX(48px) rotateZ(360deg);
+        `
+        } else if (props.large) {
+          return `
+            transform: translateX(38px) rotateZ(360deg);
         `
         } else if (props.small) {
           return `
-          transform: translateX(28px) rotateZ(360deg);
+            transform: translateX(18px) rotateZ(360deg);
         `
         } else if (props.extraSmall) {
           return `
-          transform: translateX(18px) rotateZ(360deg);
-        `
-        } else if (props.extraSmalll) {
-          return `
-          transform: translateX(8px) rotateZ(360deg);
+            transform: translateX(8px) rotateZ(360deg);
         `
         } else {
           return `
-          transform: translateX(38px) rotateZ(360deg);
+            transform: translateX(28px) rotateZ(360deg);
         `
         }
       }}
@@ -121,25 +121,25 @@ const Slider = styled.span`
   transition: 300ms;
   transition-delay: 200ms;
   ${(props) => {
-    if (props.large) {
+    if (props.extraLarge) {
       return `
         padding-inline-start: 6px;
       `
-    } else if (props.small) {
+    } else if (props.large) {
       return `
-        padding-inline-start: 4px;
+        padding-inline-start: 5px;
       `
-    } else if (props.extraSmall) {
+    } else if (props.small) {
       return `
         padding-inline-start: 3px;
       `
-    } else if (props.extraSmalll) {
+    } else if (props.extraSmall) {
       return `
         padding-inline-start: 2px;
       `
     } else {
       return `
-        padding-inline-start: 5px;
+        padding-inline-start: 4px;
       `
     }
   }}
@@ -150,35 +150,35 @@ const Slider = styled.span`
     transition: 300ms;
     border-radius: 50%;
     ${(props) => {
-      if (props.large) {
+      if (props.extraLarge) {
         return `
-        width: 40px;
-        height: 40px;
-        top: 5px;
+          width: 40px;
+          height: 40px;
+          top: 5px;
+      `
+      } else if (props.large) {
+        return `
+          width: 32px;
+          height: 32px;
+          top: 4px;
       `
       } else if (props.small) {
         return `
-        width: 24px;
-        height: 24px;
-        top: 3px;
+          width: 16px;
+          height: 16px;
+          top: 2px;
       `
       } else if (props.extraSmall) {
         return `
-        width: 16px;
-        height: 16px;
-        top: 2px;
-      `
-      } else if (props.extraSmalll) {
-        return `
-        width: 8px;
-        height: 8px;
-        top: 1px;
+          width: 8px;
+          height: 8px;
+          top: 1px;
       `
       } else {
         return `
-        width: 32px;
-        height: 32px;
-        top: 4px;
+          width: 24px;
+          height: 24px;
+          top: 3px;
       `
       }
     }}
