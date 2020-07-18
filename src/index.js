@@ -7,18 +7,21 @@ export const Toggle = ({
   extraLarge,
   large,
   small,
-  extraSmall
+  extraSmall,
+  onColor,
+  offColor,
 }) => (
   <Container>
     {offText && (
-      <Text
+      <OffText
         extraLarge={extraLarge}
         large={large}
         small={small}
         extraSmall={extraSmall}
+        offColor={offColor}
       >
         {offText}
-      </Text>
+      </OffText>
     )}
     <Wrapper
       extraLarge={extraLarge}
@@ -41,14 +44,15 @@ export const Toggle = ({
       />
     </Wrapper>
     {onText && (
-      <Text
+      <OnText
         extraLarge={extraLarge}
         large={large}
         small={small}
         extraSmall={extraSmall}
+        onColor={onColor}
       >
         {onText}
-      </Text>
+      </OnText>
     )}
   </Container>
 )
@@ -60,6 +64,7 @@ const Container = styled.div`
 `
 
 const Text = styled.span`
+  font-family: inherit;
   ${(props) => {
     if (props.extraLarge) {
       return `
@@ -83,7 +88,15 @@ const Text = styled.span`
       `
     }
   }}
-`
+`;
+
+const OffText = styled(Text)`
+  color: ${props => props.offColor ? props.offColor : 'inherit'};
+`;
+
+const OnText = styled(Text)`
+  color: ${props => props.onColor ? props.onColor : 'inherit'};
+`;
 
 const Wrapper = styled.label`
   position: relative;
