@@ -11,8 +11,8 @@ const App = () => {
         offText='OFF'
         onText='ON'
         extraLarge
-        colorOff=''
-        colorOn=''
+        colorOff='#ED8936'
+        colorOn='#63B3ED'
         textColorOff='#f12c6b'
         textColorOn='#07e207'
       />
@@ -20,8 +20,8 @@ const App = () => {
         offText='OFF'
         onText='ON'
         large
-        colorOff=''
-        colorOn=''
+        colorOff='orange'
+        colorOn='blue'
         textColorOff='red'
         textColorOn='lightgreen'
       />

@@ -37,12 +37,14 @@ export const Toggle = ({
         large={large}
         small={small}
         extraSmall={extraSmall}
+        colorOn={colorOn}
       />
       <Slider
         extraLarge={extraLarge}
         large={large}
         small={small}
         extraSmall={extraSmall}
+        colorOff={colorOff}
       />
     </Wrapper>
     {onText && (
@@ -137,7 +139,7 @@ const Wrapper = styled.label`
 const Input = styled.input`
   display: none;
   &:checked + span {
-    background: #68d391;
+    background: ${props => props.colorOn ? props.colorOn : '#68d391'};
     &::before {
       ${(props) => {
         if (props.extraLarge) {
@@ -173,7 +175,7 @@ const Slider = styled.span`
   left: 0;
   right: 0;
   cursor: pointer;
-  background: #fc8181;
+  background: ${props => props.colorOff ? props.colorOff : '#fc8181'};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
     inset 0 3px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 36px;
