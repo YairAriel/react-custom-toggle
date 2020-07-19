@@ -7,14 +7,30 @@ import 'react-custom-toggle/dist/index.css'
 const App = () => {
   return (
     <Container>
-      <Toggle offText="OFF" onText="ON" extraLarge offColor="red" onColor="green" />
-      <Toggle offText="OFF" onText="ON" large offColor="red" onColor="blue" />
-      <Toggle offText="OFF" onText="ON" />
-      <Toggle offText="OFF" onText="ON" small />
-      <Toggle offText="OFF" onText="ON" extraSmall />
+      <Toggle
+        offText='OFF'
+        onText='ON'
+        extraLarge
+        colorOff=''
+        colorOn=''
+        textColorOff='#f12c6b'
+        textColorOn='#07e207'
+      />
+      <Toggle
+        offText='OFF'
+        onText='ON'
+        large
+        colorOff=''
+        colorOn=''
+        textColorOff='red'
+        textColorOn='lightgreen'
+      />
+      <Toggle offText='OFF' onText='ON' />
+      <Toggle offText='OFF' onText='ON' small />
+      <Toggle offText='OFF' onText='ON' extraSmall />
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
   display: flex;

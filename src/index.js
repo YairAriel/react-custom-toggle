@@ -8,8 +8,10 @@ export const Toggle = ({
   large,
   small,
   extraSmall,
-  onColor,
-  offColor,
+  colorOn,
+  colorOff,
+  textColorOff,
+  textColorOn
 }) => (
   <Container>
     {offText && (
@@ -18,7 +20,7 @@ export const Toggle = ({
         large={large}
         small={small}
         extraSmall={extraSmall}
-        offColor={offColor}
+        textColorOff={textColorOff}
       >
         {offText}
       </OffText>
@@ -49,7 +51,7 @@ export const Toggle = ({
         large={large}
         small={small}
         extraSmall={extraSmall}
-        onColor={onColor}
+        textColorOn={textColorOn}
       >
         {onText}
       </OnText>
@@ -88,15 +90,15 @@ const Text = styled.span`
       `
     }
   }}
-`;
+`
 
 const OffText = styled(Text)`
-  color: ${props => props.offColor ? props.offColor : 'inherit'};
-`;
+  color: ${(props) => (props.textColorOff ? props.textColorOff : 'inherit')};
+`
 
 const OnText = styled(Text)`
-  color: ${props => props.onColor ? props.onColor : 'inherit'};
-`;
+  color: ${(props) => (props.textColorOn ? props.textColorOn : 'inherit')};
+`
 
 const Wrapper = styled.label`
   position: relative;
