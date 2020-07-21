@@ -11,7 +11,8 @@ export const Toggle = ({
   colorOn,
   colorOff,
   textColorOff,
-  textColorOn
+  textColorOn,
+  disabled
 }) => (
   <Container>
     {offText && (
@@ -33,6 +34,7 @@ export const Toggle = ({
     >
       <Input
         type='checkbox'
+        disabled={disabled}
         extraLarge={extraLarge}
         large={large}
         small={small}
@@ -45,6 +47,7 @@ export const Toggle = ({
         small={small}
         extraSmall={extraSmall}
         colorOff={colorOff}
+        disabled={disabled}
       />
     </Wrapper>
     {onText && (
@@ -139,7 +142,7 @@ const Wrapper = styled.label`
 const Input = styled.input`
   display: none;
   &:checked + span {
-    background: ${props => props.colorOn ? props.colorOn : '#68d391'};
+    background: ${(props) => (props.colorOn ? props.colorOn : '#68d391')};
     &::before {
       ${(props) => {
         if (props.extraLarge) {
@@ -174,8 +177,9 @@ const Slider = styled.span`
   bottom: 0;
   left: 0;
   right: 0;
-  cursor: pointer;
-  background: ${props => props.colorOff ? props.colorOff : '#fc8181'};
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  background: ${(props) =>
+    props.colorOff ? props.colorOff : props.disabled ? '#d2d2d2' : '#fc8181'};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
     inset 0 3px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 36px;

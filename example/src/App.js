@@ -26,6 +26,7 @@ const App = () => {
         textColorOn='lightgreen'
       />
       <Toggle offText='OFF' onText='ON' />
+      <Toggle disabled />
       <Toggle offText='OFF' onText='ON' small />
       <Toggle offText='OFF' onText='ON' extraSmall />
     </Container>
