@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Toggle = ({
+const Toggle = ({
   offText,
   onText,
   extraLarge,
@@ -177,7 +177,7 @@ const Slider = styled.span`
   bottom: 0;
   left: 0;
   right: 0;
-  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   background: ${(props) =>
     props.colorOff ? props.colorOff : props.disabled ? '#d2d2d2' : '#fc8181'};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
@@ -249,3 +249,5 @@ const Slider = styled.span`
     }}
   }
 `
+
+export default Toggle
