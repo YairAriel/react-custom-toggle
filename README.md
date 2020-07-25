@@ -7,22 +7,21 @@
 ## Install
 
 ```bash
-npm install --save react-custom-toggle
+npm install react-custom-toggle
+```
+
+Or
+
+```bash
+yarn add react-custom-toggle
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import Toggle from 'react-custom-toggle'
 
-import MyComponent from 'react-custom-toggle'
-import 'react-custom-toggle/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+const Example = () => <Toggle />
 ```
 
 ## License
