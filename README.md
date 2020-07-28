@@ -24,6 +24,39 @@ import Toggle from 'react-custom-toggle'
 const Example = () => <Toggle />
 ```
 
+## **Props**
+
+#### Texts
+
+| Name      | Type     | Default | Description                      |
+| --------- | -------- | ------- | -------------------------------- |
+| `onText`  | `string` | ``      | Text attached to the 'on' state  |
+| `offText` | `string` | ``      | Text attached to the 'off' state |
+
+#### Colors
+
+| Name           | Type     | Default             | Description                                  |
+| -------------- | -------- | ------------------- | -------------------------------------------- |
+| `colorOn`      | `string` | ![#68d391]`#68d391` | Background color of the Toggle in 'on' mode  |
+| `colorOff`     | `string` | ![#fc8181]`#fc8181` | Background color of the Toggle in 'off' mode |
+| `textColorOn`  | `string` | `inherit`           | Color of the 'on' text                       |
+| `textColorOff` | `string` | `inherit`           | Color of the 'off' text                      |
+
+#### Sizes
+
+| Name         | Type      | Default | Description                     |
+| ------------ | --------- | ------- | ------------------------------- |
+| `extraLarge` | `boolean` | `false` | Set the Toggle extra large size |
+| `large`      | `boolean` | `false` | Set the Toggle large size       |
+| `small`      | `boolean` | `false` | Set the Toggle small size       |
+| `extraSmall` | `boolean` | `false` | Set the Toggle extra small size |
+
+#### Other props
+
+| Name       | Type      | Default | Description             |
+| ---------- | --------- | ------- | ----------------------- |
+| `disabled` | `boolean` | `false` | Set the Toggle disabled |
+
 ## License
 
 MIT © [YairAriel](https://github.com/YairAriel)
