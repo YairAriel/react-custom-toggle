@@ -28,19 +28,19 @@ const Example = () => <Toggle />
 
 #### Texts
 
-| Name      | Type     | Default | Description                      |
-| --------- | -------- | ------- | -------------------------------- |
-| `onText`  | `string` | ``      | Text attached to the 'on' state  |
-| `offText` | `string` | ``      | Text attached to the 'off' state |
+| Name      | Type     | Default                               | Description |
+| --------- | -------- | ------------------------------------- | ----------- |
+| `onText`  | `string` | `` | Text attached to the 'on' state  |
+| `offText` | `string` | `` | Text attached to the 'off' state |
 
 #### Colors
 
-| Name           | Type     | Default             | Description                                  |
-| -------------- | -------- | ------------------- | -------------------------------------------- |
-| `colorOn`      | `string` | ![#68d391]`#68d391` | Background color of the Toggle in 'on' mode  |
-| `colorOff`     | `string` | ![#fc8181]`#fc8181` | Background color of the Toggle in 'off' mode |
-| `textColorOn`  | `string` | `inherit`           | Color of the 'on' text                       |
-| `textColorOff` | `string` | `inherit`           | Color of the 'off' text                      |
+| Name           | Type     | Default                                                                  | Description                                  |
+| -------------- | -------- | ------------------------------------------------------------------------ | -------------------------------------------- |
+| `colorOn`      | `string` | ![#68d391](https://via.placeholder.com/15/68d391/000000?text=+)`#68d391` | Background color of the Toggle in 'on' mode  |
+| `colorOff`     | `string` | ![#fc8181](https://via.placeholder.com/15/fc8181/000000?text=+)`#fc8181` | Background color of the Toggle in 'off' mode |
+| `textColorOn`  | `string` | `inherit`                                                                | Color of the 'on' text                       |
+| `textColorOff` | `string` | `inherit`                                                                | Color of the 'off' text                      |
 
 #### Sizes
 
