@@ -28,10 +28,10 @@ const Example = () => <Toggle />
 
 #### Texts
 
-| Name      | Type     | Default                               | Description |
-| --------- | -------- | ------------------------------------- | ----------- |
-| `onText`  | `string` | `` | Text attached to the 'on' state  |
-| `offText` | `string` | `` | Text attached to the 'off' state |
+| Name      | Type     | Default | Description                      |
+| --------- | -------- | ------- | -------------------------------- |
+| `onText`  | `string` | ''      | Text attached to the 'on' state  |
+| `offText` | `string` | ''      | Text attached to the 'off' state |
 
 #### Colors
 

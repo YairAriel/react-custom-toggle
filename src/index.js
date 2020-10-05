@@ -177,6 +177,7 @@ const Slider = styled.span`
   bottom: 0;
   left: 0;
   right: 0;
+  text-align: left;
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   background: ${(props) =>
     props.colorOff ? props.colorOff : props.disabled ? '#d2d2d2' : '#fc8181'};

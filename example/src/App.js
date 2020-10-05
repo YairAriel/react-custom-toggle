@@ -6,6 +6,22 @@ import Toggle from 'react-custom-toggle'
 const App = () => {
   return (
     <Container>
+      <Title>React Custom Toggle</Title>
+      <h3>Installation</h3>
+      <Pre>
+        <code>{`npm install react-custom-toggle`}</code>
+      </Pre>
+      <Pre>
+        <code>{`yarn add react-custom-toggle`}</code>
+      </Pre>
+      <h3>Usage</h3>
+      <Pre>
+        <code>
+          {`import Toggle from 'react-custom-toggle';
+          
+const Example = () => <Toggle />;`}
+        </code>
+      </Pre>
       <Toggle
         offText='OFF'
         onText='ON'
@@ -33,11 +49,21 @@ const App = () => {
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
+  padding: 0 10vw;
+`
+
+const Title = styled.h1`
+  margin-top: 5vw;
+  text-align: center;
+`
+
+const Pre = styled.pre`
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 10px 20px;
+  width: 576px;
+  text-align: left;
 `
 
 export default App
