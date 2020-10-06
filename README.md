@@ -1,6 +1,7 @@
 # react-custom-toggle
 
 > A customizable toggle-switch component for react
+> [Demo and docs](https://yairariel.github.io/react-custom-toggle/)
 
 [![NPM](https://img.shields.io/npm/v/react-custom-toggle.svg)](https://www.npmjs.com/package/react-custom-toggle) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -26,12 +27,23 @@ const Example = () => <Toggle />
 
 ## **Props**
 
+#### Sizes
+
+Only single size can be picked. The toggle has a medium size by default (if no size specified)
+
+| Name         | Type      | Default | Description                     |
+| ------------ | --------- | ------- | ------------------------------- |
+| `extraLarge` | `boolean` | `false` | Set the Toggle extra large size |
+| `large`      | `boolean` | `false` | Set the Toggle large size       |
+| `small`      | `boolean` | `false` | Set the Toggle small size       |
+| `extraSmall` | `boolean` | `false` | Set the Toggle extra small size |
+
 #### Texts
 
-| Name      | Type     | Default                               | Description |
-| --------- | -------- | ------------------------------------- | ----------- |
-| `onText`  | `string` | `` | Text attached to the 'on' state  |
-| `offText` | `string` | `` | Text attached to the 'off' state |
+| Name      | Type     | Default | Description                      |
+| --------- | -------- | ------- | -------------------------------- |
+| `onText`  | `string` | ''      | Text attached to the 'on' state  |
+| `offText` | `string` | ''      | Text attached to the 'off' state |
 
 #### Colors
 
@@ -41,15 +53,6 @@ const Example = () => <Toggle />
 | `colorOff`     | `string` | ![#fc8181](https://via.placeholder.com/15/fc8181/000000?text=+)`#fc8181` | Background color of the Toggle in 'off' mode |
 | `textColorOn`  | `string` | `inherit`                                                                | Color of the 'on' text                       |
 | `textColorOff` | `string` | `inherit`                                                                | Color of the 'off' text                      |
-
-#### Sizes
-
-| Name         | Type      | Default | Description                     |
-| ------------ | --------- | ------- | ------------------------------- |
-| `extraLarge` | `boolean` | `false` | Set the Toggle extra large size |
-| `large`      | `boolean` | `false` | Set the Toggle large size       |
-| `small`      | `boolean` | `false` | Set the Toggle small size       |
-| `extraSmall` | `boolean` | `false` | Set the Toggle extra small size |
 
 #### Other props
 

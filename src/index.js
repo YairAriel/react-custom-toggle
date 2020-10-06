@@ -177,13 +177,14 @@ const Slider = styled.span`
   bottom: 0;
   left: 0;
   right: 0;
+  text-align: left;
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   background: ${(props) =>
     props.colorOff ? props.colorOff : props.disabled ? '#d2d2d2' : '#fc8181'};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
     inset 0 3px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 36px;
-  transition: 300ms;
+  transition: transform 300ms, background-color 300ms;
   transition-delay: 200ms;
   ${(props) => {
     if (props.extraLarge) {

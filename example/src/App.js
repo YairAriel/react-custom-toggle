@@ -1,12 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import BasicUsage from './components/BasicUsage'
+import Sizes from './components/Sizes'
 import Toggle from 'react-custom-toggle'
 
 const App = () => {
   return (
     <Container>
-      <Toggle
+      <Title> React Custom Toggle </Title>
+      <BasicUsage />
+      <Sizes />
+      {/* <Toggle
         offText='OFF'
         onText='ON'
         extraLarge
@@ -27,17 +32,18 @@ const App = () => {
       <Toggle offText='OFF' onText='ON' />
       <Toggle disabled />
       <Toggle offText='OFF' onText='ON' small />
-      <Toggle offText='OFF' onText='ON' extraSmall />
+      <Toggle offText='OFF' onText='ON' extraSmall /> */}
     </Container>
   )
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
+  padding: 0 10vw;
+`
+
+const Title = styled.h1`
+  margin-top: 3vw;
+  text-align: center;
 `
 
 export default App
