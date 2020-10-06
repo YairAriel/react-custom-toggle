@@ -1,28 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import BasicUsage from './components/BasicUsage'
+import Sizes from './components/Sizes'
 import Toggle from 'react-custom-toggle'
 
 const App = () => {
   return (
     <Container>
-      <Title>React Custom Toggle</Title>
-      <h3>Installation</h3>
-      <Pre>
-        <code>{`npm install react-custom-toggle`}</code>
-      </Pre>
-      <Pre>
-        <code>{`yarn add react-custom-toggle`}</code>
-      </Pre>
-      <h3>Usage</h3>
-      <Pre>
-        <code>
-          {`import Toggle from 'react-custom-toggle';
-          
-const Example = () => <Toggle />;`}
-        </code>
-      </Pre>
-      <Toggle
+      <Title> React Custom Toggle </Title>
+      <BasicUsage />
+      <Sizes />
+      {/* <Toggle
         offText='OFF'
         onText='ON'
         extraLarge
@@ -43,7 +32,7 @@ const Example = () => <Toggle />;`}
       <Toggle offText='OFF' onText='ON' />
       <Toggle disabled />
       <Toggle offText='OFF' onText='ON' small />
-      <Toggle offText='OFF' onText='ON' extraSmall />
+      <Toggle offText='OFF' onText='ON' extraSmall /> */}
     </Container>
   )
 }
@@ -53,17 +42,8 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  margin-top: 5vw;
+  margin-top: 3vw;
   text-align: center;
-`
-
-const Pre = styled.pre`
-  border: 1px solid #ccc;
-  background: #f5f5f5;
-  border-radius: 4px;
-  padding: 10px 20px;
-  width: 576px;
-  text-align: left;
 `
 
 export default App
