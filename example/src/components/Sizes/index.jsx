@@ -38,21 +38,21 @@ const Sizes = () => {
 };
 
 const Container = styled.div`
-  margin: 5vw 0;
+  margin: 30px 0;
 `;
 
 const Box = styled.div`
   border: 1px solid #eee;
   box-shadow: 1px 3px 3px #ccc;
-  height: 20vw;
+  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 2vw;
+  padding: 20px 0;
 `;
 
 const ToogleBox = styled.div`
-  height: 6vw;
+  height: 50px;
 `;
 
 const RadioGroup = styled.div`
@@ -116,9 +116,9 @@ const Pre = styled.pre`
   background: #f5f5f5;
   border-radius: 4px;
   padding: 10px 20px;
-  width: 40vw;
+  width: 50%;
   text-align: left;
-  margin: 0 auto 2vw;
+  margin: 0 auto;
 `;
 
 export default Sizes;

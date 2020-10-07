@@ -38,11 +38,14 @@ const App = () => {
 }
 
 const Container = styled.div`
-  padding: 0 10vw;
+  width: 768px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  margin: 0 auto;
 `
 
 const Title = styled.h1`
-  margin-top: 3vw;
+  margin-top: 20px;
   text-align: center;
 `
 
