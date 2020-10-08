@@ -22,7 +22,13 @@ const Sizes = () => {
         <RadioGroup onChange={(e) => setSelectedSize(e.target.value)}>
           {sizeOptions.map((size, index) => (
             <Radio htmlFor={size} className="radio" key={`size-${index}`}>
-              <input readOnly type="radio" name="sizes" value={size} id={size} checked={selectedSize === size} />
+              <input
+                readOnly
+                type="radio"
+                name="sizes"
+                value={size}
+                id={size}
+                checked={selectedSize === size} />
               <span className="label"></span>{size}
             </Radio>
           ))}

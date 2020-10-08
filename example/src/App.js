@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import BasicUsage from './components/BasicUsage'
 import Sizes from './components/Sizes'
+import Texts from './components/Texts';
 import Toggle from 'react-custom-toggle'
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Title> React Custom Toggle </Title>
       <BasicUsage />
       <Sizes />
+      <Texts />
       {/* <Toggle
         offText='OFF'
         onText='ON'
