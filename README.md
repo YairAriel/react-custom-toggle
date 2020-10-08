@@ -21,12 +21,24 @@ yarn add react-custom-toggle
 ## Usage
 
 ```jsx
-import Toggle from 'react-custom-toggle'
+import React, { useState } from 'react';
+import Toggle from 'react-custom-toggle';
+     
+const Example = () => {
+  const [isSunShining, setIsSunShining] = useState(false);
 
-const Example = () => <Toggle />
+  return (
+    <Toggle checked={isSunShining} onChange={setIsSunShining} />
+  );
+};
 ```
 
 ## **Props**
+
+| Name       | Type       | Required | Description                                          | 
+| -----------| ---------- | -------- | ---------------------------------------------------- |
+| `checked`  | `boolean`  | `true`   | Determines whehter the toggle is checked or not      |
+| `onChange` | `function` | `true`   | A function to handle the changes in the toggle state |
 
 #### Sizes
 

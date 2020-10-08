@@ -5,6 +5,7 @@ import Toggle from 'react-custom-toggle';
 import TextField from '../common/TextField';
 
 const Texts = () => {
+  const [isSunShining, setIsSunShining] = useState(false);
   const [textForOff, setTextForOff] = useState('OFF');
   const [textForOn, setTextForOn] = useState('ON');
 
@@ -12,16 +13,29 @@ const Texts = () => {
     <Container>
       <h3>Texts</h3>
       <Box>
-        <Toggle offText={textForOff} onText={textForOn} />
+        <Toggle
+          checked={isSunShining}
+          onChange={setIsSunShining}
+          offText={textForOff}
+          onText={textForOn}
+        />
         <InputWrapper>
           <TextField label="textOff" value={textForOff} changeHandler={setTextForOff} />
           <TextField label="textOn" value={textForOn} changeHandler={setTextForOn} />
         </InputWrapper>
-        <Pre>
-          <code>
-            {`<Toggle offText="${textForOff}" onText="${textForOn}" />`}
-          </code>
-        </Pre>
+        <CodeWrapper>
+          <Pre>
+            <code>
+              {`const [isSunShining, setIsSunShining] = useState(${isSunShining})`}
+            </code>
+          </Pre>
+          <Pre>
+            <code>
+              {`<Toggle checked={isSunShining} onChange={setIsSunShining} 
+  offText="${textForOff}" onText="${textForOn}" />`}
+            </code>
+          </Pre>
+        </CodeWrapper>
       </Box>
     </Container>
   );
@@ -34,16 +48,20 @@ const Container = styled.div`
 const Box = styled.div`
   border: 1px solid #eee;
   box-shadow: 1px 3px 3px #ccc;
-  height: 180px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px;
 `;
 
 const InputWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+`;
+
+const CodeWrapper = styled.div`
+  height: 140px;
 `;
 
 const Pre = styled.pre`
@@ -53,7 +71,8 @@ const Pre = styled.pre`
   padding: 10px 20px;
   min-width: 50%;
   text-align: left;
-  margin: 0 auto;
+  line-height: 22px;
+  font-size: 14px;
 `;
 
 export default Texts;

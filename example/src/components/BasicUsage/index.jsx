@@ -13,9 +13,17 @@ const BasicUsage = () => (
     <h3>Usage</h3>
     <Pre>
       <code>
-        {`import Toggle from 'react-custom-toggle';
-      
-const Example = () => <Toggle />;`}
+        {`
+import React, { useState } from 'react';
+import Toggle from 'react-custom-toggle';
+     
+const Example = () => {
+  const [isSunShining, setIsSunShining] = useState(false);
+
+  return (
+    <Toggle checked={isSunShining} onChange={setIsSunShining} />
+  );
+};`}
       </code>
     </Pre>
   </>
@@ -26,9 +34,9 @@ const Pre = styled.pre`
   background: #f5f5f5;
   border-radius: 4px;
   padding: 10px 20px;
-  width: 60%;
   text-align: left;
   box-sizing: border-box;
+  font-size: 14px;
 `;
 
 export default BasicUsage;
