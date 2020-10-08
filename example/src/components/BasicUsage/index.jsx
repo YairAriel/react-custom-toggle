@@ -26,8 +26,9 @@ const Pre = styled.pre`
   background: #f5f5f5;
   border-radius: 4px;
   padding: 10px 20px;
-  width: 40vw;
+  width: 60%;
   text-align: left;
+  box-sizing: border-box;
 `;
 
 export default BasicUsage;

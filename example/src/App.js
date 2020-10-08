@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import BasicUsage from './components/BasicUsage'
 import Sizes from './components/Sizes'
+import Texts from './components/Texts';
 import Toggle from 'react-custom-toggle'
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Title> React Custom Toggle </Title>
       <BasicUsage />
       <Sizes />
+      <Texts />
       {/* <Toggle
         offText='OFF'
         onText='ON'
@@ -38,11 +40,14 @@ const App = () => {
 }
 
 const Container = styled.div`
-  padding: 0 10vw;
+  width: 768px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  margin: 0 auto;
 `
 
 const Title = styled.h1`
-  margin-top: 3vw;
+  margin-top: 20px;
   text-align: center;
 `
 
