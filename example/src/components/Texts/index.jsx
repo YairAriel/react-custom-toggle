@@ -26,7 +26,7 @@ const Texts = () => {
         <CodeWrapper>
           <Pre>
             <code>
-              {`const [isSunShining, setIsSunShining] = useState(${isSunShining})`}
+              {`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}
             </code>
           </Pre>
           <Pre>

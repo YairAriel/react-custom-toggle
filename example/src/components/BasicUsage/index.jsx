@@ -4,14 +4,14 @@ import styled from 'styled-components';
 const BasicUsage = () => (
   <>
     <h3>Installation</h3>
-    <Pre>
+    <CodeExample>
       <code>{`npm install react-custom-toggle`}</code>
-    </Pre>
-    <Pre>
+    </CodeExample>
+    <CodeExample>
       <code>{`yarn add react-custom-toggle`}</code>
-    </Pre>
+    </CodeExample>
     <h3>Usage</h3>
-    <Pre>
+    <CodeExample>
       <code>
         {`
 import React, { useState } from 'react';
@@ -25,11 +25,11 @@ const Example = () => {
   );
 };`}
       </code>
-    </Pre>
+    </CodeExample>
   </>
 );
 
-const Pre = styled.pre`
+const CodeExample = styled.pre`
   border: 1px solid #ccc;
   background: #f5f5f5;
   border-radius: 4px;
