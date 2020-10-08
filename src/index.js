@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Toggle = ({
+  checked,
+  onChange,
   offText,
   onText,
   extraLarge,
@@ -34,6 +36,8 @@ const Toggle = ({
     >
       <Input
         type='checkbox'
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
         disabled={disabled}
         extraLarge={extraLarge}
         large={large}

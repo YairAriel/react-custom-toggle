@@ -6,6 +6,7 @@ import Toggle from 'react-custom-toggle';
 const sizeOptions = ['extraSmall', 'small', 'default', 'large', 'extraLarge'];
 
 const Sizes = () => {
+  const [isSunShining, setIsSunShining] = useState(false);
   const [selectedSize, setSelectedSize] = useState('default');
 
   return (
@@ -14,6 +15,8 @@ const Sizes = () => {
       <Box>
         <ToogleBox>
           <Toggle
+            checked={isSunShining}
+            onChange={setIsSunShining}
             extraSmall={selectedSize === 'extraSmall'}
             small={selectedSize === 'small'}
             large={selectedSize === 'large'}
@@ -33,11 +36,18 @@ const Sizes = () => {
             </Radio>
           ))}
         </RadioGroup>
-        <Pre>
-          <code>
-            {`<Toggle ${selectedSize === 'default' ? '' : selectedSize + ' '}/>`}
-          </code>
-        </Pre>
+        <CodeWrapper>
+          <Pre>
+            <code>
+              {`const [isSunShining, setIsSunShining] = useState(${isSunShining})`}
+            </code>
+          </Pre>
+          <Pre>
+            <code>
+              {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${selectedSize === 'default' ? '' : selectedSize + ' '}/>`}
+            </code>
+          </Pre>
+        </CodeWrapper>
       </Box>
     </Container>
   );
@@ -50,11 +60,11 @@ const Container = styled.div`
 const Box = styled.div`
   border: 1px solid #eee;
   box-shadow: 1px 3px 3px #ccc;
-  height: 180px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px;
 `;
 
 const ToogleBox = styled.div`
@@ -117,14 +127,17 @@ const Radio = styled.label`
   }
 `;
 
+const CodeWrapper = styled.div`
+  height: 110px;
+`;
+
 const Pre = styled.pre`
   border: 1px solid #ccc;
   background: #f5f5f5;
   border-radius: 4px;
   padding: 10px 20px;
-  width: 50%;
   text-align: left;
-  margin: 0 auto;
+  font-size: 14px;
 `;
 
 export default Sizes;
