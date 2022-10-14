@@ -16,7 +16,7 @@ const Sizes = () => {
     <Container>
       <h3>Sizes</h3>
       <Box>
-        <ToogleBox>
+        <ToggleBox>
           <Toggle
             checked={isSunShining}
             onChange={setIsSunShining}
@@ -25,7 +25,7 @@ const Sizes = () => {
             large={selectedSize === 'large'}
             extraLarge={selectedSize === 'extraLarge'}
           />
-        </ToogleBox>
+        </ToggleBox>
         <RadioGroup onChange={(e) => setSelectedSize(e.target.value)}>
           {sizeOptions.map((size, index) => (
             <Radio htmlFor={size} className="radio" key={`size-${index}`}>
@@ -42,29 +42,27 @@ const Sizes = () => {
             </Radio>
           ))}
         </RadioGroup>
-        <CodeWrapper>
-          <Pre>
-            <code>{`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}</code>
-          </Pre>
-          <Pre>
-            <code>
-              {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${
-                selectedSize === 'default' ? '' : selectedSize + ' '
-              }/>`}
-            </code>
-          </Pre>
-        </CodeWrapper>
+        <pre>
+          <code>{`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}</code>
+        </pre>
+        <pre>
+          <code>
+            {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${
+              selectedSize === 'default' ? '' : selectedSize + ' '
+            }/>`}
+          </code>
+        </pre>
       </Box>
     </Container>
   );
 };
 
 const Container = styled.div`
-  margin: 30px 0;
+  margin: 3em 0;
 `;
 
-const ToogleBox = styled.div`
-  height: 50px;
+const ToggleBox = styled.div`
+  margin: 2em 0;
 `;
 
 const RadioGroup = styled.div`
@@ -121,19 +119,6 @@ const Radio = styled.label`
       }
     }
   }
-`;
-
-const CodeWrapper = styled.div`
-  height: 110px;
-`;
-
-const Pre = styled.pre`
-  border: 1px solid #ccc;
-  background: #f5f5f5;
-  border-radius: 4px;
-  padding: 10px 20px;
-  text-align: left;
-  font-size: 14px;
 `;
 
 export default Sizes;
