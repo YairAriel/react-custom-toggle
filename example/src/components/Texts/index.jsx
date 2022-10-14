@@ -1,8 +1,10 @@
+/** @format */
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
 import Toggle from 'react-custom-toggle';
-import TextField from '../common/TextField';
+
+import { Box, TextField } from '../common';
 
 const Texts = () => {
   const [isSunShining, setIsSunShining] = useState(false);
@@ -25,9 +27,7 @@ const Texts = () => {
         </InputWrapper>
         <CodeWrapper>
           <Pre>
-            <code>
-              {`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}
-            </code>
+            <code>{`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}</code>
           </Pre>
           <Pre>
             <code>
@@ -43,16 +43,6 @@ const Texts = () => {
 
 const Container = styled.div`
   margin: 30px 0;
-`;
-
-const Box = styled.div`
-  border: 1px solid #eee;
-  box-shadow: 1px 3px 3px #ccc;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
 `;
 
 const InputWrapper = styled.div`

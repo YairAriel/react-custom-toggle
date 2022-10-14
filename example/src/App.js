@@ -1,40 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import BasicUsage from './components/BasicUsage'
-import Sizes from './components/Sizes'
+import BasicUsage from './components/BasicUsage';
+import Sizes from './components/Sizes';
 import Texts from './components/Texts';
-import Toggle from 'react-custom-toggle'
+import Colors from './components/Colors';
 
 const App = () => {
   return (
     <Container>
-      <Title> React Custom Toggle </Title>
+      <Title>React Custom Toggle</Title>
       <BasicUsage />
       <Sizes />
       <Texts />
-      {/* <Toggle
-        offText='OFF'
-        onText='ON'
-        extraLarge
-        colorOff='#ED8936'
-        colorOn='#63B3ED'
-        textColorOff='#f12c6b'
-        textColorOn='#07e207'
-      />
-      <Toggle
-        offText='OFF'
-        onText='ON'
-        large
-        colorOff='orange'
-        colorOn='blue'
-        textColorOff='red'
-        textColorOn='lightgreen'
-      />
-      <Toggle offText='OFF' onText='ON' />
-      <Toggle disabled />
-      <Toggle offText='OFF' onText='ON' small />
-      <Toggle offText='OFF' onText='ON' extraSmall /> */}
+      <Colors />
     </Container>
   )
 }

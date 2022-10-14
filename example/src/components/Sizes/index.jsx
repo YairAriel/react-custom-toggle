@@ -1,7 +1,10 @@
+/** @format */
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
 import Toggle from 'react-custom-toggle';
+
+import { Box } from '../common';
 
 const sizeOptions = ['extraSmall', 'small', 'default', 'large', 'extraLarge'];
 
@@ -20,7 +23,8 @@ const Sizes = () => {
             extraSmall={selectedSize === 'extraSmall'}
             small={selectedSize === 'small'}
             large={selectedSize === 'large'}
-            extraLarge={selectedSize === 'extraLarge'} />
+            extraLarge={selectedSize === 'extraLarge'}
+          />
         </ToogleBox>
         <RadioGroup onChange={(e) => setSelectedSize(e.target.value)}>
           {sizeOptions.map((size, index) => (
@@ -31,20 +35,22 @@ const Sizes = () => {
                 name="sizes"
                 value={size}
                 id={size}
-                checked={selectedSize === size} />
-              <span className="label"></span>{size}
+                checked={selectedSize === size}
+              />
+              <span className="label"></span>
+              {size}
             </Radio>
           ))}
         </RadioGroup>
         <CodeWrapper>
           <Pre>
-            <code>
-              {`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}
-            </code>
+            <code>{`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}</code>
           </Pre>
           <Pre>
             <code>
-              {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${selectedSize === 'default' ? '' : selectedSize + ' '}/>`}
+              {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${
+                selectedSize === 'default' ? '' : selectedSize + ' '
+              }/>`}
             </code>
           </Pre>
         </CodeWrapper>
@@ -55,16 +61,6 @@ const Sizes = () => {
 
 const Container = styled.div`
   margin: 30px 0;
-`;
-
-const Box = styled.div`
-  border: 1px solid #eee;
-  box-shadow: 1px 3px 3px #ccc;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
 `;
 
 const ToogleBox = styled.div`
@@ -90,7 +86,7 @@ const Radio = styled.label`
       border-color: #63b3ed;
       &:after {
         transform: scale(1);
-        transition: all .2s cubic-bezier(.35,.9,.4,.9);
+        transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
         opacity: 1;
       }
     }
@@ -115,13 +111,13 @@ const Radio = styled.label`
       border-radius: 100%;
       background: #63b3ed;
       transform: scale(0);
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       opacity: 0.2;
       pointer-events: none;
     }
     &:hover {
       &:after {
-      transform: scale(3.6);
+        transform: scale(3.6);
       }
     }
   }
