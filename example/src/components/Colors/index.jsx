@@ -17,6 +17,17 @@ const Colors = () => {
   return (
     <Container>
       <h3>Colors</h3>
+      <Disclaimer>
+        Valid values: hex colors (e.g #ff2bbc) or&nbsp;
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          named colors
+        </a>
+        .
+      </Disclaimer>
       <Box>
         <h4>Background colors</h4>
         <ToggleBox>
@@ -40,8 +51,7 @@ const Colors = () => {
   colorOff="${colorOff}" colorOn="${colorOn}" />`}
           </code>
         </pre>
-      </Box>
-      <Box>
+        <Hr width="320" />
         <h4>Texts colors</h4>
         <ToggleBox>
           <Toggle
@@ -83,6 +93,16 @@ const ToggleBox = styled.div`
 const InputWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+`;
+
+const Disclaimer = styled.p`
+  color: #637280;
+  margin-bottom: 1em;
+`;
+
+const Hr = styled.hr`
+  margin: 4em auto;
+  border: 1px solid #ccc;
 `;
 
 export default Colors;
