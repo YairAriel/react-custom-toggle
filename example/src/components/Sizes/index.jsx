@@ -1,7 +1,10 @@
+/** @format */
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
 import Toggle from 'react-custom-toggle';
+
+import { Box } from '../common';
 
 const sizeOptions = ['extraSmall', 'small', 'default', 'large', 'extraLarge'];
 
@@ -13,15 +16,16 @@ const Sizes = () => {
     <Container>
       <h3>Sizes</h3>
       <Box>
-        <ToogleBox>
+        <ToggleBox>
           <Toggle
             checked={isSunShining}
             onChange={setIsSunShining}
             extraSmall={selectedSize === 'extraSmall'}
             small={selectedSize === 'small'}
             large={selectedSize === 'large'}
-            extraLarge={selectedSize === 'extraLarge'} />
-        </ToogleBox>
+            extraLarge={selectedSize === 'extraLarge'}
+          />
+        </ToggleBox>
         <RadioGroup onChange={(e) => setSelectedSize(e.target.value)}>
           {sizeOptions.map((size, index) => (
             <Radio htmlFor={size} className="radio" key={`size-${index}`}>
@@ -31,44 +35,34 @@ const Sizes = () => {
                 name="sizes"
                 value={size}
                 id={size}
-                checked={selectedSize === size} />
-              <span className="label"></span>{size}
+                checked={selectedSize === size}
+              />
+              <span className="label"></span>
+              {size}
             </Radio>
           ))}
         </RadioGroup>
-        <CodeWrapper>
-          <Pre>
-            <code>
-              {`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}
-            </code>
-          </Pre>
-          <Pre>
-            <code>
-              {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${selectedSize === 'default' ? '' : selectedSize + ' '}/>`}
-            </code>
-          </Pre>
-        </CodeWrapper>
+        <pre>
+          <code>{`const [isSunShining, setIsSunShining] = useState(${isSunShining});`}</code>
+        </pre>
+        <pre>
+          <code>
+            {`<Toggle checked={isSunShining} onChange={setIsSunShining} ${
+              selectedSize === 'default' ? '' : selectedSize + ' '
+            }/>`}
+          </code>
+        </pre>
       </Box>
     </Container>
   );
 };
 
 const Container = styled.div`
-  margin: 30px 0;
+  margin: 3em 0;
 `;
 
-const Box = styled.div`
-  border: 1px solid #eee;
-  box-shadow: 1px 3px 3px #ccc;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-`;
-
-const ToogleBox = styled.div`
-  height: 50px;
+const ToggleBox = styled.div`
+  margin: 2em 0;
 `;
 
 const RadioGroup = styled.div`
@@ -90,7 +84,7 @@ const Radio = styled.label`
       border-color: #63b3ed;
       &:after {
         transform: scale(1);
-        transition: all .2s cubic-bezier(.35,.9,.4,.9);
+        transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
         opacity: 1;
       }
     }
@@ -115,29 +109,16 @@ const Radio = styled.label`
       border-radius: 100%;
       background: #63b3ed;
       transform: scale(0);
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       opacity: 0.2;
       pointer-events: none;
     }
     &:hover {
       &:after {
-      transform: scale(3.6);
+        transform: scale(3.6);
       }
     }
   }
-`;
-
-const CodeWrapper = styled.div`
-  height: 110px;
-`;
-
-const Pre = styled.pre`
-  border: 1px solid #ccc;
-  background: #f5f5f5;
-  border-radius: 4px;
-  padding: 10px 20px;
-  text-align: left;
-  font-size: 14px;
 `;
 
 export default Sizes;

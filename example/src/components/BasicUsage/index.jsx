@@ -1,17 +1,19 @@
+/** @format */
+
 import React from 'react';
 import styled from 'styled-components';
 
 const BasicUsage = () => (
-  <>
+  <Container>
     <h3>Installation</h3>
-    <CodeExample>
+    <pre>
       <code>{`npm install react-custom-toggle`}</code>
-    </CodeExample>
-    <CodeExample>
+    </pre>
+    <pre>
       <code>{`yarn add react-custom-toggle`}</code>
-    </CodeExample>
+    </pre>
     <h3>Usage</h3>
-    <CodeExample>
+    <pre>
       <code>
         {`
 import React, { useState } from 'react';
@@ -25,18 +27,12 @@ const Example = () => {
   );
 };`}
       </code>
-    </CodeExample>
-  </>
+    </pre>
+  </Container>
 );
 
-const CodeExample = styled.pre`
-  border: 1px solid #ccc;
-  background: #f5f5f5;
-  border-radius: 4px;
-  padding: 10px 20px;
-  text-align: left;
-  box-sizing: border-box;
-  font-size: 14px;
+const Container = styled.div`
+  margin: 3em 0;
 `;
 
 export default BasicUsage;
