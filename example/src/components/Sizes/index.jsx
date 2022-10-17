@@ -13,7 +13,7 @@ const Sizes = () => {
   const [selectedSize, setSelectedSize] = useState('default');
 
   return (
-    <Container>
+    <SizesContainer>
       <h3>Sizes</h3>
       <Box>
         <ToggleBox>
@@ -53,11 +53,11 @@ const Sizes = () => {
           </code>
         </pre>
       </Box>
-    </Container>
+    </SizesContainer>
   );
 };
 
-const Container = styled.div`
+const SizesContainer = styled.div`
   margin: 3em 0;
 `;
 

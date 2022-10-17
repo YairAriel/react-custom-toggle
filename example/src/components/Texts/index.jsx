@@ -12,7 +12,7 @@ const Texts = () => {
   const [textForOn, setTextForOn] = useState('ON');
 
   return (
-    <Container>
+    <TextsContainer>
       <h3>Texts</h3>
       <Box>
         <ToggleBox>
@@ -37,11 +37,11 @@ const Texts = () => {
           </code>
         </pre>
       </Box>
-    </Container>
+    </TextsContainer>
   );
 };
 
-const Container = styled.div`
+const TextsContainer = styled.div`
   margin: 3em 0;
 `;
 

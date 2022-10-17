@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BasicUsage = () => (
-  <Container>
+  <WrapperContainer>
     <h3>Installation</h3>
     <pre>
       <code>{`npm install react-custom-toggle`}</code>
@@ -28,10 +28,10 @@ const Example = () => {
 };`}
       </code>
     </pre>
-  </Container>
+  </WrapperContainer>
 );
 
-const Container = styled.div`
+const WrapperContainer = styled.div`
   margin: 3em 0;
 `;
 

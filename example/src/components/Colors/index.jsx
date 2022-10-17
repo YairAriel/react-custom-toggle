@@ -15,7 +15,7 @@ const Colors = () => {
   const [textColorOn, setTextColorOn] = useState('royalblue');
 
   return (
-    <Container>
+    <ColorsContainer>
       <h3>Colors</h3>
       <Disclaimer>
         Valid values: hex colors (e.g #ff2bbc) or&nbsp;
@@ -78,11 +78,11 @@ const Colors = () => {
           </code>
         </pre>
       </Box>
-    </Container>
+    </ColorsContainer>
   );
 };
 
-const Container = styled.div`
+const ColorsContainer = styled.div`
   margin: 3em 0;
 `;
 
