@@ -2,7 +2,7 @@
 
 > A customizable toggle-switch component for react
 
-[Demo and docs](https://yairariel.github.io/react-custom-toggle-example/)
+[Demo and docs](https://dazzling-dieffenbachia-1c616c.netlify.app/)
 
 [![NPM](https://img.shields.io/npm/v/react-custom-toggle.svg)](https://www.npmjs.com/package/react-custom-toggle) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
