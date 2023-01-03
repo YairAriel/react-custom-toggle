@@ -2,7 +2,7 @@
 
 > A customizable toggle-switch component for react
 
-[Demo and docs](https://dazzling-dieffenbachia-1c616c.netlify.app/)
+[Demo and docs](https://react-custom-toggle.netlify.app/)
 
 [![NPM](https://img.shields.io/npm/v/react-custom-toggle.svg)](https://www.npmjs.com/package/react-custom-toggle) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -62,8 +62,8 @@ Only single size can be picked. The toggle has a medium size by default (if no s
 
 | Name           | Type     | Default                                                                  | Description                                  |
 | -------------- | -------- | ------------------------------------------------------------------------ | -------------------------------------------- |
-| `colorOn`      | `string` | ![#68d391](https://via.placeholder.com/15/68d391/000000?text=+)`#68d391` | Background color of the Toggle in 'on' mode  |
-| `colorOff`     | `string` | ![#fc8181](https://via.placeholder.com/15/fc8181/000000?text=+)`#fc8181` | Background color of the Toggle in 'off' mode |
+| `colorOn`      | `string` | ![#68d391](https://via.placeholder.com/15/68d391/68d391.png) `#68d391` | Background color of the Toggle in 'on' mode  |
+| `colorOff`     | `string` | ![#fc8181](https://via.placeholder.com/15/fc8181/fc8181.png) `#fc8181` | Background color of the Toggle in 'off' mode |
 | `textColorOn`  | `string` | `inherit`                                                                | Color of the 'on' text                       |
 | `textColorOff` | `string` | `inherit`                                                                | Color of the 'off' text                      |
 
